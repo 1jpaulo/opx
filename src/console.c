@@ -1,10 +1,14 @@
 #include "console.h"
+#include <unistd.h>
 
-int parseArguments(int argc, const char **argv)
+int parse_args(int argc, LPWSTR *uargv)
 {
-    if (argc == 3) {
-        if (strcmp(argv[1], "-l") == 0) {
-            listFiles(argv[2]);
+    if (argc == 1) printf("Error: No arguments provided.\n");
+    if (argc >= 2) 
+    {
+        if (wcscmp(uargv[1], L"-l") == 0) 
+        {
+            list_dir(uargv[2]);
         }
     }
     return 0;

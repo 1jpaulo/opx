@@ -1,4 +1,9 @@
-#include <stdio.h>
+#ifndef _WINDOWS_
+
 #include <windows.h>
 
-int listFiles(const char *originalPath);
+#endif
+
+#include <stdio.h>
+
+int list_dir(wchar_t *originalPath);

@@ -1,4 +1,3 @@
-#include <string.h>
 #include "file.h"
 
-int parseArguments(int argc, const char **argv);
+int parse_args(int argc, LPWSTR *uargv);
